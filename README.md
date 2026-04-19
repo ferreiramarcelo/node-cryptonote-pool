@@ -1,3 +1,9 @@
+## This repo is not maintained. Pull requests that are critical or of high quality and well tested are accepted - but not much more.
+### Looking for maintainers. Please open an issue if interested. 
+
+--------
+
+
 node-cryptonote-pool
 ====================
 
@@ -74,6 +80,8 @@ Comes with lightweight example front-end script which uses the pool's AJAX API.
 * http://monero.crypto-pool.fr
 * https://minexmr.com
 
+A pool must be operational for 6 months or more before it can be added to this list.
+
 
 Usage
 ===
@@ -105,6 +113,12 @@ Clone the repository and run `npm update` for all the dependencies to be install
 ```bash
 git clone https://github.com/zone117x/node-cryptonote-pool.git pool
 cd pool
+
+nvm install 0.10.48
+nvm use 0.10.48
+nvm alias default 0.10.48
+nvm use default
+
 npm update
 ```
 
@@ -196,7 +210,7 @@ Explanation for each field:
         "maxDiff": 100000,
         "targetTime": 100, //Try to get 1 share per this many seconds
         "retargetTime": 30, //Check to see if we should retarget every this many seconds
-        "variancePercent": 30, //Allow time to very this % from target without retargeting
+        "variancePercent": 30, //Allow time to vary this % from target without retargeting
         "maxJump": 100 //Limit diff percent increase/decrease in a single retargetting
     },
 
